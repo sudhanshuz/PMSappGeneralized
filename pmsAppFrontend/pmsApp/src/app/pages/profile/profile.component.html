@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <mat-card class="profile-details-card" *ngIf="login.getUser()">
+    <mat-card-content class="text-center">
+      <img src="../../../assets/profile-admin.jpg" alt="img" width="200" height="200" class="img" >
+      <h2>{{User['fullName']}}</h2>
+      <p>{{User.role}}</p>
+      <div class="profile-details ">
+        <div>
+          <mat-icon >mail</mat-icon>
+          <span>{{User.email}}</span>
+        </div>
+        <div>
+          <mat-icon>phone</mat-icon>
+          <span>{{User.contact}}</span>
+        </div>
+      </div>
+    </mat-card-content>
+    <div *ngIf="role==='ROLE_ADMIN'" class="adminUpdate">
+    <mat-card-actions class="buttons">
+       <button [routerLink]="'/admin/editUser/'+name" mat-raised-button color="accent">Update</button>
+    </mat-card-actions>
+  </div>
+  <div *ngIf="role==='ROLE_DOCTOR'" class="doctorUpdate">
+    <mat-card-actions class="buttons">
+       <button [routerLink]="'/doctor/editUser/'+name" mat-raised-button color="accent">Update</button>
+    </mat-card-actions>
+  </div>
+  </mat-card>
+  
+
+</body>

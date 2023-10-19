@@ -1,0 +1,24 @@
+2023-07-07 03:12:39 [restartedMain] INFO  com.pms.supplier.SupplierApplication -
+				Starting SupplierApplication using Java 17.0.7 on LAPTOP-LAEMEI2E with PID 9076 (C:\Users\HP\git\repository\supplier\target\classes started by HP in C:\Users\HP\git\repository\supplier)
+2023-07-07 03:12:39 [restartedMain] DEBUG com.pms.supplier.SupplierApplication -
+				Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 03:12:39 [restartedMain] INFO  com.pms.supplier.SupplierApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2023-07-07 03:12:41 [restartedMain] INFO  com.pms.supplier.SupplierApplication -
+				Started SupplierApplication in 1.831 seconds (JVM running for 35618.798)
+2023-07-07 12:36:05 [restartedMain] INFO  com.pms.supplier.SupplierApplication -
+				Starting SupplierApplication using Java 17.0.7 on LAPTOP-LAEMEI2E with PID 2592 (C:\Users\HP\git\repository\supplier\target\classes started by HP in C:\Users\HP\git\repository\supplier)
+2023-07-07 12:36:05 [restartedMain] DEBUG com.pms.supplier.SupplierApplication -
+				Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 12:36:05 [restartedMain] INFO  com.pms.supplier.SupplierApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2023-07-07 12:36:08 [restartedMain] INFO  com.pms.supplier.SupplierApplication -
+				Started SupplierApplication in 4.71 seconds (JVM running for 423.413)
+2023-07-07 12:36:15 [restartedMain] INFO  com.pms.supplier.SupplierApplication -
+				Starting SupplierApplication using Java 17.0.7 on LAPTOP-LAEMEI2E with PID 10100 (C:\Users\HP\git\repository\supplier\target\classes started by HP in C:\Users\HP\git\repository\supplier)
+2023-07-07 12:36:15 [restartedMain] DEBUG com.pms.supplier.SupplierApplication -
+				Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 12:36:15 [restartedMain] INFO  com.pms.supplier.SupplierApplication -
+				No active profile set, falling back to 1 default profile: "default"
+2023-07-07 12:36:22 [restartedMain] INFO  com.pms.supplier.SupplierApplication -
+				Started SupplierApplication in 7.939 seconds (JVM running for 10.009)

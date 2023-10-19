@@ -1,0 +1,13 @@
+.form-center{
+justify-content: center;
+
+display: flex;
+
+}
+
+mat-card{
+    background-color: #009688;
+}
+label{
+    color: white;
+}

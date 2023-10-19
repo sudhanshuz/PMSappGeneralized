@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<h2 class="heading">
+    Picked up orders
+  </h2>  
+  <div >
+       <div class="card" *ngFor="let o of pickedUpOrders">
+        <div class="row">
+          <div class="col custom-margin">
+            <h5 ><b>Doctor Name: </b>{{o['docName']}}</h5>
+          </div>
+          <div class="col-1 custom-margin-1">
+          <h5 ><b>Order Id: </b>{{o['orderId']}}</h5>
+        </div>
+
+        </div>
+        <div class="row">
+          <div class="col-sm custom-margin-2">
+            <h4>Contact Details</h4>
+          <h5 ><b>Phone no: </b>{{o['docContact']}}</h5> 
+          <h5 ><b>email: </b>{{o['docEmail']}}</h5>
+        </div> 
+        <div class="col-1 custom-margin-3">
+          <h4>Billing Details</h4>
+          <h5 ><b>Total amount: </b>{{o['total']}}</h5>
+          <h5 ><b>Pickup date: </b>{{o['pickupDate']}}</h5>
+          <h5 ><b>Items description:</b> 
+            <div>Drug name: {{o['drugName']}}</div>
+            <div>quantity: {{o['qty']}}</div>
+               
+          </h5>
+          <h5 ><b>Supplier Id: </b>{{o['supplierId']}}</h5>
+        </div> 
+         </div>  
+        </div>
+
+        <div class="card" *ngIf="pickedUpOrders.length===0">  
+            <h1>no picked up  orders</h1>
+        </div>
+
+  </div>
+

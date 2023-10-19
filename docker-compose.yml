@@ -1,0 +1,97 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: userDB
+    ports:
+      - "27018:27017"
+    networks:
+    - my-net
+    volumes:
+      - mongodb-data:/data/db
+
+  user-service:
+    image: user-service
+    container_name: users
+    ports:
+     - "8002:8002"
+    depends_on:
+     - mongodb
+
+    environment:
+      SPRING_DATA_MONGODB_HOST: mongodb
+      SPRING_DATA_MONGODB_PORT: 27017
+      SPRING_DATA_MONGODB_DATABASE: userdb
+    networks:
+      - my-net
+
+  supplier-service:
+    image: supplier-service
+    container_name: suppliers
+    ports:
+     - "8000:8000"
+    depends_on:
+     - mongodb
+
+    environment:
+      SPRING_DATA_MONGODB_HOST: mongodb
+      SPRING_DATA_MONGODB_PORT: 27017
+      SPRING_DATA_MONGODB_DATABASE: supplierdb
+    networks:
+      - my-net
+
+  sales-report-service:
+    image: sales-report-service
+    container_name: sales
+    ports:
+     - "8004:8004"
+    depends_on:
+     - mongodb
+
+    environment:
+      SPRING_DATA_MONGODB_HOST: mongodb
+      SPRING_DATA_MONGODB_PORT: 27017
+      SPRING_DATA_MONGODB_DATABASE: salesdb
+    networks:
+      - my-net
+
+
+  orders-service:
+    image: orders-service
+    container_name: orders
+    ports:
+     - "8001:8001"
+    depends_on:
+     - mongodb
+
+    environment:
+      SPRING_DATA_MONGODB_HOST: mongodb
+      SPRING_DATA_MONGODB_PORT: 27017
+      SPRING_DATA_MONGODB_DATABASE: ordersdb
+    networks:
+      - my-net
+
+  api-gateway:
+    image: api-gateway
+    container_name: gateway
+    ports:
+      - "9000:9000"
+    depends_on:
+      - user-service
+      - supplier-service
+      - sales-report-service
+      - orders-service
+
+  angular-app:
+    image: frontend
+    container_name: pmsApp
+    ports:
+      - "4200:4200"
+    networks:
+      - my-net
+
+networks:
+  my-net:
+
+volumes:
+  mongodb-data:

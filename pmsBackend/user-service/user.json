@@ -1,0 +1,30 @@
+[{
+  "_id": 1,
+  "name": "swap101",
+  "fullName": "Swapnil Patil",
+  "contact": "7841979689",
+  "email": "sudhanshungp@gmail.com",
+  "password": "$2a$10$1V7k7Mt5MnoP9bCSc0Y57O63F5apLjYIVAAy4FuWanlXMIVN5q7nO",
+  "role": "ROLE_DOCTOR",
+  "_class": "com.pms.users.model.User"
+},
+{
+  "_id": 2,
+  "name": "sudhanshu",
+  "fullName": "Sudhanshu Patil",
+  "contact": "7350593612",
+  "email": "sudhanshupatilsp@gmail.com",
+  "password": "$2a$10$TB.yRwfO6LUPfp9o/tIiJOtzVD.6pUfePaS10SiIoNKyaQkeCK.rq",
+  "role": "ROLE_ADMIN",
+  "_class": "com.pms.users.model.User"
+},
+{
+  "_id": 3,
+  "name": "aryan101",
+  "fullName": "Aryan Raut",
+  "contact": "9350593610",
+  "email": "sudhanshungp@gmail.com",
+  "password": "$2a$10$BP2HwaswKU0X6wQ8QLxn3.ceYfPeQTbqVK4wk5qMLrWUKw8komsi6",
+  "role": "ROLE_DOCTOR",
+  "_class": "com.pms.users.model.User"
+}]

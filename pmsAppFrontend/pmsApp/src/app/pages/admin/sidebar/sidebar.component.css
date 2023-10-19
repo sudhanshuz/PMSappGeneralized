@@ -1,0 +1,13 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 200px;
+  }
+  mat-card,button,mat-icon{
+    color:#009688;
+  }
+
+  
+  

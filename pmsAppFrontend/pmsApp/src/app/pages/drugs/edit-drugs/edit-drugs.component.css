@@ -1,0 +1,29 @@
+form {
+    max-width: 100px;
+    height: 350px;
+    margin: 0 auto;
+  }
+  
+  
+  button {
+    width: 100%;
+  }
+  
+
+h1{
+    width: 100%;
+}
+.custom{
+  align-items: center;
+  margin: auto;
+}
+mat-card{
+  background-color: #009688;
+}
+
+#price{
+  display:inline-block;
+}
+label{
+  color: white;
+}

@@ -1,0 +1,30 @@
+form {
+    max-width: 100px;
+    height: 350px;
+    margin: 0 auto;
+  }
+  
+  
+  button {
+    width: 100%;
+  }
+  
+
+h1{
+    width: 100%;
+}
+.custom{
+  margin: auto;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 10px 6px;
+  align-items: center;
+  
+}
+mat-card{
+  background-color: #009688;
+}
+h3{
+  color: white;
+}
+
