@@ -43,7 +43,7 @@ import com.pms.users.service.UserService;
 import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "*")
 public class UserController {
 	@Autowired
 	private UserService userService;
