@@ -40,7 +40,7 @@ file:any;
     const uploadImageData = new FormData();
     uploadImageData.append('imageFile', this.file, this.file.name);
 
-    this.httpClient.post('http://localhost:8000/image/upload', uploadImageData, { observe: 'response' })
+    this.httpClient.post('http://40.87.51.93:8000/image/upload', uploadImageData, { observe: 'response' })
       .subscribe((response) => {
         if (response.status === 200) {
           console.log('Image uploaded successfully');

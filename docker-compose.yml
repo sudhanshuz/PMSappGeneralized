@@ -2,14 +2,21 @@ version: '3'
 services:
   mongodb:
     image: mongo:latest
-    container_name: userDB
+    container_name: pmsDB
     ports:
       - "27018:27017"
     networks:
     - my-net
     volumes:
       - mongodb-data:/data/db
-
+  service-registry:
+    image: service-registry
+    container_name: eureka
+    ports:
+      - "8761:8761"
+    networks:
+      - my-net
+    
   user-service:
     image: user-service
     container_name: users
@@ -24,6 +31,8 @@ services:
       SPRING_DATA_MONGODB_DATABASE: userdb
     networks:
       - my-net
+
+
 
   supplier-service:
     image: supplier-service
@@ -68,6 +77,14 @@ services:
       SPRING_DATA_MONGODB_HOST: mongodb
       SPRING_DATA_MONGODB_PORT: 27017
       SPRING_DATA_MONGODB_DATABASE: ordersdb
+    networks:
+      - my-net
+
+  payment-service:
+    image: payment-service
+    container_name: payments
+    ports:
+      - "8003:8003"
     networks:
       - my-net
 

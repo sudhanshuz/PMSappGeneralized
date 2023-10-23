@@ -12,22 +12,22 @@ export class DrugsService {
    }
 
    public viewDrugs(){
-    return this._http.get(`http://localhost:8000/drugs/getAll`);
+    return this._http.get(`http://40.87.51.93:8000/drugs/getAll`);
         }
 
     public addDrugs(Drugs:any){
-      return this._http.post(`http://localhost:8000/drugs/add`,Drugs); 
+      return this._http.post(`http://40.87.51.93:8000/drugs/add`,Drugs); 
     }
 
     public deleteDrugs(drugName:any){
-      return this._http.delete(`http://localhost:8000/drugs/deleteDrugByName/${drugName}`,drugName); 
+      return this._http.delete(`http://40.87.51.93:8000/drugs/deleteDrugByName/${drugName}`,drugName); 
     }
     public viewDrugByName(drugName:any){
-      return this._http.get(`http://localhost:8000/drugs/viewDrugByName/${drugName}`);
+      return this._http.get(`http://40.87.51.93:8000/drugs/viewDrugByName/${drugName}`);
           }
 
           public editDrugs(Drugs:any){
-            return this._http.put(`http://localhost:8000/drugs/edit`,Drugs);
+            return this._http.put(`http://40.87.51.93:8000/drugs/edit`,Drugs);
           }
 
 
@@ -35,7 +35,7 @@ export class DrugsService {
             let formData=new FormData();
             formData.append("file",file);
             formData.append("drugData",JSON.stringify(Drugs));
-            return this._http.post(`http://localhost:8000/drugs/addWithImg`,formData); 
+            return this._http.post(`http://40.87.51.93:8000/drugs/addWithImg`,formData); 
           }
 
         }

@@ -12,7 +12,7 @@ export class LoginService {
   //get current user
   public getCurrentUser(){
     let accessToken = localStorage.getItem('token');
-    return this.http.get(`http://localhost:8002/user/currentUser`,{
+    return this.http.get(`http://40.87.51.93:8002/user/currentUser`,{
       headers: new HttpHeaders({
         "Authorization":`Bearer ${accessToken}`,
       }),
@@ -22,7 +22,7 @@ export class LoginService {
   //generate token
 
   public generateToken(loginData:any){
-    return this.http.post(`http://localhost:8002/user/authenticate`,loginData);
+    return this.http.post(`http://40.87.51.93:8002/user/authenticate`,loginData);
   }
 
   //login user: sets token in localStorage

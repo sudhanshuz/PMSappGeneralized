@@ -109,7 +109,7 @@ export class ViewDrugsComponent implements OnInit{
 
   getImage(img:any) {
     //Make a call to Sprinf Boot to get the Image Bytes.
-    this.httpClient.get('http://localhost:8000/image/get/' + img)
+    this.httpClient.get('http://40.87.51.93:8000/image/get/' + img)
       .subscribe(
         res => {
           this.retrieveResonse = res;
@@ -123,7 +123,7 @@ export class ViewDrugsComponent implements OnInit{
 
   getFilteredImage(img:any) {
     //Make a call to Sprinf Boot to get the Image Bytes.
-    this.httpClient.get('http://localhost:8000/image/get/' + img)
+    this.httpClient.get('http://40.87.51.93:8000/image/get/' + img)
       .subscribe(
         res => {
           this.retrieveResonse = res;
