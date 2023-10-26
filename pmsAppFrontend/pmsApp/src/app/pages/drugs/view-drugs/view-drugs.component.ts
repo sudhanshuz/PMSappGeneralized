@@ -5,6 +5,7 @@ import { LoginService } from 'src/app/services/login.service';
 import { HttpClient,HttpErrorResponse  } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from 'src/app/components/confirmation-dialog/confirmation-dialog.component';
+import baseUrl from 'src/app/services/helper';
 
 
 @Component({
@@ -65,7 +66,7 @@ export class ViewDrugsComponent implements OnInit{
 
     dialogRef.afterClosed().subscribe({
       
-     next:(result)  => {
+     next:(result:any)  => {
       if (result === true) {
         // Perform the delete action here
         // Call your delete API or delete logic
@@ -109,7 +110,7 @@ export class ViewDrugsComponent implements OnInit{
 
   getImage(img:any) {
     //Make a call to Sprinf Boot to get the Image Bytes.
-    this.httpClient.get('http://40.87.51.93:8000/image/get/' + img)
+    this.httpClient.get(`${baseUrl}:8000/image/get/` + img)
       .subscribe(
         res => {
           this.retrieveResonse = res;
@@ -123,7 +124,7 @@ export class ViewDrugsComponent implements OnInit{
 
   getFilteredImage(img:any) {
     //Make a call to Sprinf Boot to get the Image Bytes.
-    this.httpClient.get('http://40.87.51.93:8000/image/get/' + img)
+    this.httpClient.get(`${baseUrl}:8000/image/get/` + img)
       .subscribe(
         res => {
           this.retrieveResonse = res;

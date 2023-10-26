@@ -2,6 +2,7 @@ import { HttpClient,HttpErrorResponse  } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { DrugsService } from 'src/app/services/drugs.service';
+import baseUrl from 'src/app/services/helper';
 
 @Component({
   selector: 'app-add-drugs',
@@ -40,7 +41,7 @@ file:any;
     const uploadImageData = new FormData();
     uploadImageData.append('imageFile', this.file, this.file.name);
 
-    this.httpClient.post('http://40.87.51.93:8000/image/upload', uploadImageData, { observe: 'response' })
+    this.httpClient.post(`${baseUrl}:8000/image/upload`, uploadImageData, { observe: 'response' })
       .subscribe((response) => {
         if (response.status === 200) {
           console.log('Image uploaded successfully');

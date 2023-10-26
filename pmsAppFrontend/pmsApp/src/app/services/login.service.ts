@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import baseUrl from './helper';
 //import baseUrl from './helper';
 
 @Injectable({
@@ -12,7 +13,7 @@ export class LoginService {
   //get current user
   public getCurrentUser(){
     let accessToken = localStorage.getItem('token');
-    return this.http.get(`http://40.87.51.93:8002/user/currentUser`,{
+    return this.http.get(`${baseUrl}:8002/user/currentUser`,{
       headers: new HttpHeaders({
         "Authorization":`Bearer ${accessToken}`,
       }),
@@ -22,7 +23,7 @@ export class LoginService {
   //generate token
 
   public generateToken(loginData:any){
-    return this.http.post(`http://40.87.51.93:8002/user/authenticate`,loginData);
+    return this.http.post(`${baseUrl}:8002/user/authenticate`,loginData);
   }
 
   //login user: sets token in localStorage

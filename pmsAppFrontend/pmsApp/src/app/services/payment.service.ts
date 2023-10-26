@@ -18,7 +18,7 @@ export class PaymentService {
   constructor(private _http: HttpClient) { }
 
   public createOrder(orderRequest:any):Observable<any>{
-    return this._http.post(`http://40.87.51.93:8003/payment/createOrder`,
+    return this._http.post(`${baseUrl}:8003/payment/createOrder`,
     {customerName: orderRequest.name,
 		email: orderRequest.email,
 		phoneNumber: orderRequest.phone,

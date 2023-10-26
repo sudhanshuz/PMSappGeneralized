@@ -13,18 +13,18 @@ export class UserService {
 
   //add user
   public addUser(User:any){
-    return this.http.post(`http://40.87.51.93:8002/user/add`,User);
+    return this.http.post(`${baseUrl}:8002/user/add`,User);
   }
 
 public verifyOrderById(orderId:any){
-return this.http.put(`http://40.87.51.93:8002/user/verifyOrderByOrderId/${orderId}`,orderId);
+return this.http.put(`${baseUrl}:8002/user/verifyOrderByOrderId/${orderId}`,orderId);
 }
 
 public getUserByUserName(name:any){
-  return this.http.get(`http://40.87.51.93:8002/user/getByName/${name}`,name);
+  return this.http.get(`${baseUrl}:8002/user/getByName/${name}`,name);
 }
 
 public editUser(user:any){
-  return this.http.put(`http:40.87.51.93:8002/user/edit`,user);
+  return this.http.put(`${baseUrl}:8002/user/edit`,user);
 }
 }
